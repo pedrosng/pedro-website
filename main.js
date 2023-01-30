@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const sizes = {
   width: window.innerWidth,
@@ -14,8 +13,9 @@ const scene = new THREE.Scene();
 /**
  * Camera
  */
-const camera = new THREE.PerspectiveCamera(45, sizes.width/sizes.height, 1, 100);
-camera.position.z = 100
+const camera = new THREE.OrthographicCamera(-sizes.width,sizes.width,sizes.height,-sizes.height,1,10000);
+//const camera = new THREE.PerspectiveCamera(50, sizes.width/sizes.height, 1, 10000);
+camera.position.z = sizes.width;
 scene.add(camera);
 
 /**
@@ -29,10 +29,12 @@ scene.add(light);
  */
 const loader = new THREE.TextureLoader();
 const texture = loader.load('/textures/lroc_color_poles_1k.jpg')
-const sphereGeometry = new THREE.SphereGeometry( 40 ,60, 60 );
+const sphereGeometry = new THREE.SphereGeometry( 1000 ,60, 60 );
 const sphereMaterial = new THREE.MeshBasicMaterial( { map: texture } );
 const sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-console.log(sphere.position);
+
+sphere.position.x = -sizes.width;
+sphere.position.y = sizes.height;
 scene.add( sphere );
 
 /** 
@@ -50,19 +52,13 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.render(scene,camera);
 
-/**
- * Controls
-*/
-const controls = new OrbitControls(camera,canvas);
-controls.autoRotate=true;
-controls.enableZoom=false;
 
 /**
  * Animation loop
  */
 function animate() {
   requestAnimationFrame(animate);
-  controls.update();
+  //controls.update();
   renderer.render(scene,camera);
 }
 

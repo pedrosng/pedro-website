@@ -17,4 +17,7 @@ body
   z-index: 1;
   top: 0;
   left: 0;
+  /*remove border created on canvas when mousing shape*/
+  outline: none;
 }
+
