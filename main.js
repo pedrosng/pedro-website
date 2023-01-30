@@ -1,8 +1,10 @@
 import * as THREE from 'three';
 
+const frame = document.querySelector('.frame');
+
 const sizes = {
-  width: window.innerWidth,
-  height: window.innerHeight
+  width: frame.clientWidth,
+  height: frame.clientHeight
 }
 
 /**
@@ -54,8 +56,8 @@ renderer.render(scene,camera);
  * On re-size
 */
 window.addEventListener('resize', () => {
-  sizes.width = window.innerWidth;
-  sizes.height = window.innerHeight;
+  sizes.width = frame.clientWidth;
+  sizes.height = frame.clientHeight;
 
   sphere.position.set(-sizes.width,sizes.height);
   

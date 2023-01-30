@@ -9,6 +9,7 @@ html,
 body
 {
   overflow: hidden;
+  background-color: black;
 }
 
 .webgl
@@ -17,7 +18,20 @@ body
   z-index: 1;
   top: 0;
   left: 0;
-  /*remove border created on canvas when mousing shape*/
+  /*remove border created on canvas when mouse controls shape shape*/
   outline: none;
+}
+
+.frame
+{
+  width: 96vw;
+  height: 94vh;
+  border-color: whitesmoke;
+  border-style: solid;
+  border-width: thin;
+  position: absolute;
+  z-index: 2;
+  left: 2vw;
+  top: 3vh;
 }
 
