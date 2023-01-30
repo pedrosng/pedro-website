@@ -33,8 +33,10 @@ const sphereGeometry = new THREE.SphereGeometry( 1000 ,60, 60 );
 const sphereMaterial = new THREE.MeshBasicMaterial( { map: texture } );
 const sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
 
-sphere.position.x = -sizes.width;
-sphere.position.y = sizes.height;
+//sphere.position.x = -sizes.width;
+//sphere.position.y = sizes.height;
+
+sphere.position.set(-sizes.width,sizes.height);
 scene.add( sphere );
 
 /** 
@@ -52,13 +54,34 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.render(scene,camera);
 
+/** 
+ * On re-size
+*/
+window.addEventListener('resize', () => {
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
+
+  //camera.position.z = sizes.width;
+  //camera.aspect = sizes.width/sizes.height;
+  camera.z = sizes.width;
+  camera.left = -sizes.width;
+  camera.right = sizes.width;
+  camera.top = sizes.height;
+  camera.bottom = -sizes.height;
+
+  sphere.position.set(-sizes.width,sizes.height);
+
+  camera.updateProjectionMatrix();
+  
+  renderer.setSize(sizes.width,sizes.height);
+});
 
 /**
  * Animation loop
  */
 function animate() {
   requestAnimationFrame(animate);
-  //controls.update();
+  sphere.rotation.y -= 0.004;
   renderer.render(scene,camera);
 }
 
