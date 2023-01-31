@@ -35,3 +35,28 @@ body
   top: 3vh;
 }
 
+.main
+{
+  font-family: "Heebo", sans-serif;
+  position: absolute;
+  z-index: 2;
+  font-size: 1.1rem;
+  color: whitesmoke;
+  width: inherit;
+  display: flex;
+}
+
+.nav-links
+{
+  list-style: none;
+  width: inherit;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.4rem;
+  padding-right: 2rem;
+}
+
+.nav-links li 
+{
+  padding-left: 7rem;
+}
