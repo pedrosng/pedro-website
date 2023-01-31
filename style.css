@@ -52,6 +52,7 @@ body
   width: inherit;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   padding-top: 0.4rem;
   padding-right: 2rem;
 }
