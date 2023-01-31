@@ -46,6 +46,32 @@ body
   display: flex;
 }
 
+.logo
+{
+  font-weight: 90;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 0.4rem;
+  padding-left: 2rem;
+  color: black;
+}
+
+.logo #name 
+{
+  font-size: 3rem;
+  height: fit-content;
+}
+
+.logo #occupation
+{
+  font-size: 1.5rem;
+  position: relative;
+  bottom:1rem;
+  left:0.15rem;
+}
+
 .nav-links
 {
   list-style: none;
