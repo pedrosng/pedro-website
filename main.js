@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+import routes from './js/router';
+
+console.log(routes.start());
 
 const frame = document.querySelector('.frame');
 
