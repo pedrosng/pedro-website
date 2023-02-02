@@ -1,10 +1,12 @@
+import homeCtrl from './controllers/home-controller';
+
 let internals = {} 
 let externals = {}
 
 internals.routes = {
         home: {
             hash: '#home',
-            controller: 'home-ctrl'
+            controller: homeCtrl
         },
         skills: {
             hash: '#skills',
@@ -64,7 +66,8 @@ const loadDefaultRouteName = () => {
 
 const loadController = controllerName => {
     internals.currentHash = window.location.hash;
-    console.log('controller.start',controllerName);
+    console.log('controller.start',controllerName, typeof(controllerName));
+    controllerName.start();
 }
 
 export default externals;
