@@ -1,4 +1,5 @@
 import homeService from '../services/home-service';
+import homeView from '../views/home-view';
 
 let externals = {}
 
@@ -10,7 +11,7 @@ externals.start = () => {
     */
     homeService.getHomeContent( (err,data) => {
 
-        let homeContent = err ? { error : err } : { data : data };
+        let homeContent = err ? err : data ;
 
         console.log(homeContent);
 
