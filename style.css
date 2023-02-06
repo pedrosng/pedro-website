@@ -99,9 +99,16 @@ body
   display: flex;
   flex-direction: column;
   z-index: 2;
-  max-width: 50vw;
-  max-height: 76vh;
+  width: 50vw;
+  height: 70vh;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 10rem;
+}
+
+a 
+{
+  color: inherit;
+  text-decoration: none;
 }

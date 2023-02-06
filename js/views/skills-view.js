@@ -5,7 +5,7 @@ externals.render = data => {
 };
 
 const loadContent = data => {
-    $('.content').append('<div id="home">' + data + '</div>');
+    $('.content').append('<div id="skills">' + data + '</div>');
     console.log(data);
 }
 

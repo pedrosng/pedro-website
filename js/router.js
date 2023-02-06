@@ -1,4 +1,8 @@
 import homeCtrl from './controllers/home-controller';
+import skillsCtrl from './controllers/skills-controller';
+import projectsCtrl from './controllers/projects-controller';
+import infoCtrl from './controllers/info-controller';
+import contactCtrl from './controllers/contact-controller';
 
 let internals = {} 
 let externals = {}
@@ -10,19 +14,19 @@ internals.routes = {
         },
         skills: {
             hash: '#skills',
-            controller: 'skills-ctrl'
+            controller: skillsCtrl
         },
         projects:{
             hash: '#projects',
-            controller: 'projects-controller'
+            controller: projectsCtrl
         },
         info: {
             hash: '#info',
-            controller: 'info-ctrl'
+            controller: infoCtrl
         },
         contact:{
             hash: '#contact',
-            controller: 'contact-ctrl'
+            controller: contactCtrl
         }
     };
 
@@ -55,6 +59,11 @@ const hashCheck = () => {
     return;
    }
 
+   /**
+    * clear section(class content) element on hash change 
+   */
+   clearContentOnHashChange()
+
    //load route if valid
    loadController(internals.routes[routeName].controller);
 };
@@ -68,6 +77,10 @@ const loadController = controllerName => {
     internals.currentHash = window.location.hash;
     console.log('controller.start',controllerName, typeof(controllerName));
     controllerName.start();
+}
+
+const clearContentOnHashChange = () => {
+    $('.content').empty();
 }
 
 export default externals;

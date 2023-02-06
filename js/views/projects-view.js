@@ -5,7 +5,7 @@ externals.render = data => {
 };
 
 const loadContent = data => {
-    $('.content').append('<div id="home">' + data + '</div>');
+    $('.content').append('<div id="projects">' + data + '</div>');
     console.log(data);
 }
 
