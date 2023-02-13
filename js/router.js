@@ -1,8 +1,4 @@
-import homeCtrl from './controllers/home-controller';
-import skillsCtrl from './controllers/skills-controller';
-import projectsCtrl from './controllers/projects-controller';
-import infoCtrl from './controllers/info-controller';
-import contactCtrl from './controllers/contact-controller';
+import controllers from './controllers/controllers';
 
 let internals = {} 
 let externals = {}
@@ -10,23 +6,23 @@ let externals = {}
 internals.routes = {
         home: {
             hash: '#home',
-            controller: homeCtrl
+            controller: controllers.homeController
         },
         skills: {
             hash: '#skills',
-            controller: skillsCtrl
+            controller: controllers.skillController
         },
         projects:{
             hash: '#projects',
-            controller: projectsCtrl
+            controller: controllers.projectsController
         },
         info: {
             hash: '#info',
-            controller: infoCtrl
+            controller: controllers.infoController
         },
         contact:{
             hash: '#contact',
-            controller: contactCtrl
+            controller: controllers.contactController
         }
     };
 
@@ -51,7 +47,6 @@ const hashCheck = () => {
    let routeName = Object.keys(internals.routes).find( name => {
     return window.location.hash === internals.routes[name].hash;
    });
-   console.log(routeName)
 
    //load default route if routeName is invalid
    if(!routeName){
@@ -64,7 +59,7 @@ const hashCheck = () => {
    */
    clearContentOnHashChange()
 
-   //load route if valid
+   //load route if valid 
    loadController(internals.routes[routeName].controller);
 };
 
@@ -75,8 +70,7 @@ const loadDefaultRouteName = () => {
 
 const loadController = controllerName => {
     internals.currentHash = window.location.hash;
-    console.log('controller.start',controllerName, typeof(controllerName));
-    controllerName.start();
+    controllerName();
 }
 
 const clearContentOnHashChange = () => {
