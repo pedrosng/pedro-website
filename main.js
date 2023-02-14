@@ -1,9 +1,7 @@
 import routes from './js/router';
-import moonAnimation from './js/3d/moon-animation';
-import { startUpAnimation } from './js/animations/text-animation';
+import setUpMoonAnimation from './js/3d/moon-animation';
+import { setUpTextAnimations } from './js/animations/text-animation';
 
-startUpAnimation();
-
-moonAnimation();
-
+setUpTextAnimations();
+setUpMoonAnimation();
 routes.start();

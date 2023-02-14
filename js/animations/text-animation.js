@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 
-export const startUpAnimation = () => {
+const startUpAnimation = () => {
 
     const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
     
@@ -12,3 +12,19 @@ export const startUpAnimation = () => {
     tl.fromTo('.logo',{opacity: 0}, {opacity: 1, duration:1 }, '-=1')
     tl.fromTo('.content',{opacity: 0}, {opacity: 1, duration:1}, '-=.5' )
 }
+
+const onContentChangeAnimation = () => {
+    $('.nav-links a').click(()=>{
+        gsap.fromTo('.content', { opacity: 0 }, { opacity: 1, duration: 2 });
+    });
+}
+
+
+export const setUpTextAnimations = () => {
+    startUpAnimation();
+    onContentChangeAnimation();
+}
+
+
+
+
