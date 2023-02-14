@@ -1,0 +1,39 @@
+.intro {
+    background: black;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.intro-text {
+    color: whitesmoke;
+    font-family: "Heebo", sans-serif;
+    font-size: 2rem;
+}
+
+.hide{
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+     transform: translateY(100%);
+     display: inline-block;
+}
+
+.slider {
+    background: whitesmoke;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    z-index: 3;
+}
