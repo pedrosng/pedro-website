@@ -104,7 +104,9 @@ body
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 10rem;
+  
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 a 

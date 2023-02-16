@@ -1,3 +1,5 @@
+import '../../css/home-view.css';
+
 let externals = {}
 
 externals.render = data => {
@@ -5,7 +7,16 @@ externals.render = data => {
 };
 
 const loadContent = data => {
-    $('.content').append('<div id="home">' + data + '</div>');
+    $('.content').append(
+        '<div id="home">' + 
+            '<p class="header">' +
+                data.heather +  
+            '</p>' +
+            '<p class="body">' +
+                data.body + 
+            '</p>' + 
+        '</div>'
+    );
 }
 
 export default externals;
