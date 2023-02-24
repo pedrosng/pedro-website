@@ -20,7 +20,7 @@ let infoData = {
     }
 }
 
-let contactData = 'display contact form';
+let contactData = 'Say Hi';
 let projectsData = 'wow so many amazing projects';
 let skillsData = 'my technique is very necessary';
 
