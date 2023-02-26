@@ -4,13 +4,13 @@
     flex-direction: column;
     align-items: flex-start;
     padding-right: 10vw;
+    font-size: 1.2em;
 }
 
 .contact-form-text 
 {
-   font-size: 1.2em;
-   padding-bottom: 10px;
-   font-weight: 400;
+    padding-bottom: 10px;
+    font-weight: 400;
 }
 
 .contact-form 
@@ -24,10 +24,9 @@
 
 .contact-form input
 {
+    color: darkturquoise;
     border: none;
     background-color:rgb(30, 30, 30);
-    color: turquoise;
-    font-size: 1.2em;
     height: 96%;
     width: 100%;
 }
@@ -78,20 +77,14 @@ input:focus + #line
 
 textarea 
 {
+    color: darkturquoise;
     border: none;
     background-color:rgb(30, 30, 30);
-    color: turquoise;
     height: 96%;
     width: 100%;
     padding-left: 1em;
     padding-top: 1em;
 }
-
-textarea::placeholder {
-    font-size: 1.2em;
-    font-family: 'Heboo', sans-serif;
-}
-
 
 textarea:enabled
 {
