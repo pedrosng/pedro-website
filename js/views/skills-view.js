@@ -1,3 +1,5 @@
+import '../../css/skills-view.css'
+
 let externals = {}
 
 externals.render = data => {
@@ -5,7 +7,11 @@ externals.render = data => {
 };
 
 const loadContent = data => {
-    $('.content').append('<div id="skills">' + data + '</div>');
+    $('.content').append(
+        '<div id="skills">' + 
+        data + 
+        '</div>'
+        );
 }
 
 export default externals;

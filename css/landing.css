@@ -26,13 +26,13 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  padding-top: 0.4rem;
-  padding-right: 2rem;
+  padding-top: 0.4em;
+  padding-right: 2em;
 }
 
 .nav-links li 
 {
-  padding-left: 7rem;
+  padding-left: 7em;
 }
 
 a 

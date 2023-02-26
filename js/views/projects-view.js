@@ -1,3 +1,5 @@
+import '../../css/projects-view.css'
+
 let externals = {}
 
 externals.render = data => {
@@ -5,7 +7,10 @@ externals.render = data => {
 };
 
 const loadContent = data => {
-    $('.content').append('<div id="projects">' + data + '</div>');
+    $('.content').append(
+        '<div id="projects">' + 
+        data + 
+        '</div>');
 }
 
 export default externals;
