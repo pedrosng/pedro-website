@@ -1,0 +1,42 @@
+.logo
+{
+  width: 20vw;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 0.4em;
+  padding-left: 2em;
+}
+
+.logo #name 
+{
+  font-size: 3em;
+}
+
+.logo #occupation
+{
+  font-size: 1.5em;
+}
+
+.nav-links
+{
+  list-style: none;
+  width: inherit;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-top: 0.4rem;
+  padding-right: 2rem;
+}
+
+.nav-links li 
+{
+  padding-left: 7rem;
+}
+
+a 
+{
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap');
+
 *
 {
   margin: 0;
@@ -9,18 +11,10 @@ html,
 body
 {
   font-family: 'Heebo', 'sans-serif';
-  font-size: 1.2em;
+  font-size: 1em;
+  color: whitesmoke;
   background-color: black;
   overflow: hidden;
-}
-
-.webgl
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  /*remove border created on canvas when mouse controls shape shape*/
-  outline: none;
 }
 
 .frame
@@ -34,85 +28,44 @@ body
   z-index: 1;
   left: 2vw;
   top: 3vh;
-  
-  font-family: "Heebo", sans-serif;
-  color: whitesmoke;
-  
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  
-
 }
 
-.landing
+.landing 
 {
-  /*position: absolute;*/
   z-index: 2;
   font-size: 1.1rem;
   width: inherit;
   display: flex;
 }
 
-.logo
-{
-  font-weight: 90;
-  width: 20vw;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-top: 0.4rem;
-  padding-left: 2rem;
-  color: black;
-}
-
-.logo #name 
-{
-  font-size: 3rem;
-  height: fit-content;
-}
-
-.logo #occupation
-{
-  font-size: 1.5rem;
-  position: relative;
-  bottom:1rem;
-  left:0.15rem;
-}
-
-.nav-links
-{
-  list-style: none;
-  width: inherit;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  padding-top: 0.4rem;
-  padding-right: 2rem;
-}
-
-.nav-links li 
-{
-  padding-left: 7rem;
-}
-
 .content 
 {
   display: flex;
-  flex-direction: column;
+  /**flex-direction: column;*/
   z-index: 2;
+  /**
   width: 50vw;
   height: 70vh;
-  justify-content: center;
+  */
+  width: inherit;
+  height: inherit;
+  justify-content:flex-end;
   align-items: center;
   flex-wrap: wrap;
   color: darkturquoise; 
-  padding-left: 10rem;
-  padding-right: 10rem;
+  /**padding-left: 10em;
+  padding-right: 10em;*/
 }
 
-a 
+.webgl
 {
-  color: inherit;
-  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*remove border created on canvas when mouse controls shape shape*/
+  outline: none;
 }
+
