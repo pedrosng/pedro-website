@@ -1,4 +1,22 @@
 import gsap from 'gsap';
+import '../../css/intro-animation.css'
+
+const setUpHtmlElements = () => {
+    $('.intro')
+    .append(
+        '<div class="intro-text">' +
+            '<h1 class="hide">' +
+                '<span class="text">pedro G</span>' +
+            '</h1>' +
+            '<h1 class="hide">' +
+                '<span class="text">software Developer</span>' +
+            '</h1>' +
+        '</div>'
+    )
+    .after(
+        '<div class="slider"></div>'
+    );
+}
 
 const startUpAnimation = () => {
 
@@ -21,6 +39,7 @@ const onContentChangeAnimation = () => {
 
 
 export const setUpTextAnimations = () => {
+    setUpHtmlElements();
     startUpAnimation();
     onContentChangeAnimation();
 }

@@ -8,8 +8,10 @@
 html,
 body
 {
-  overflow: hidden;
+  font-family: 'Heebo', 'sans-serif';
+  font-size: 1.2em;
   background-color: black;
+  overflow: hidden;
 }
 
 .webgl
