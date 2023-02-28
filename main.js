@@ -3,7 +3,7 @@ import { setUpTextAnimations } from './js/animations/intro-animation';
 import { setUpLanding } from './js/views/landing';
 import setUpMoonAnimation from './js/3d/moon-animation';
 
-setUpTextAnimations();
+//setUpTextAnimations();
 setUpLanding();
 setUpMoonAnimation();
 routes.start();
