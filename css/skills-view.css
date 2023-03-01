@@ -1,14 +1,17 @@
 #skills
 {
     display: flex;
+    align-items: center;
     height: 100%;
     padding-right: 20vw;
     padding-bottom: 2%;
+    column-gap: 2%;
 }
 
 .skills-card
 {
     border-style: solid;
+    height: 70%;
     border-width: 2px;
     border-radius: 10%;
     width: 300px;
@@ -66,3 +69,71 @@
 {
     padding: 10px;
 }
+
+.arrows
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow
+{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-top: 4px solid darkturquoise;
+    border-left: 4px solid darkturquoise;
+    animation: arrow-load 2s infinite;
+}
+
+.arrow, #left 
+{
+    rotate: -45deg;
+}
+
+.arrow, #right 
+{
+    rotate: 135deg;
+}
+
+.arrow:nth-child(1)
+{
+    animation-delay: 0.3s;
+}
+
+.arrow:nth-child(2)
+{
+    animation-delay: 0.1s;     
+}
+
+.arrow:nth-child(3)
+{
+    animation-delay: -0.1s;    
+}
+
+@keyframes arrow-load {
+    0% { 
+        opacity: 0;
+        /**transform: rotate(-45deg) translate(60px,60px);*/
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        /**transform:rotate(-45deg) translate(-60px, -60px);*/
+    }
+}
+

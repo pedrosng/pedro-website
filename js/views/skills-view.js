@@ -8,7 +8,12 @@ externals.render = data => {
 
 const loadContent = data => {
     $('.content').append(
-        '<div id="skills">' + 
+        '<div id="skills">' +
+            '<div class="arrows">' +
+                '<div class="arrow" id="left"></div>' +
+                '<div class="arrow" id="left"></div>' +
+                '<div class="arrow" id="left"></div>' +
+            '</div>' +
             '<div class="skills-card">' +
                 '<div class="skills-card-header">' +
                     '<div class="skill-card-header-img-container">' +
@@ -17,7 +22,7 @@ const loadContent = data => {
                     '<h2>Java</h2>' +
                     '</div>' +
                 '<div class="skills-card-description">' +
-                '<p>description lorem ipsum</p>' +
+                    '<p>description lorem ipsum</p>' +
                 '</div>' +
                 '<div class="skills-card-body">' +
                     '<p>Jakarta EE</p>' +
@@ -31,6 +36,11 @@ const loadContent = data => {
                     '<p>Mockito</p>' +
                     '<p>Log4J</p>' +
                 '</div>' +
+            '</div>' +
+            '<div class="arrows">' +
+                '<div class="arrow" id="right"></div>' +
+                '<div class="arrow" id="right"></div>' +
+                '<div class="arrow" id="right"></div>' +
             '</div>' +
         '</div>'
         );
