@@ -1,19 +1,16 @@
+import { setUpArrows } from '../animations/arrows-animation'
 import '../../css/skills-view.css'
 
 let externals = {}
 
 externals.render = data => {
-    loadContent(data);
+    setUpskillsCard();
+    setUpArrows();
 };
 
-const loadContent = data => {
+const setUpskillsCard = data => {
     $('.content').append(
         '<div id="skills">' +
-            '<div class="arrows">' +
-                '<div class="arrow" id="left"></div>' +
-                '<div class="arrow" id="left"></div>' +
-                '<div class="arrow" id="left"></div>' +
-            '</div>' +
             '<div class="skills-card">' +
                 '<div class="skills-card-header">' +
                     '<div class="skill-card-header-img-container">' +
@@ -36,11 +33,6 @@ const loadContent = data => {
                     '<p>Mockito</p>' +
                     '<p>Log4J</p>' +
                 '</div>' +
-            '</div>' +
-            '<div class="arrows">' +
-                '<div class="arrow" id="right"></div>' +
-                '<div class="arrow" id="right"></div>' +
-                '<div class="arrow" id="right"></div>' +
             '</div>' +
         '</div>'
         );
