@@ -1,41 +1,47 @@
 import { setUpArrows } from '../animations/arrows-animation'
 import '../../css/skills-view.css'
 
-let externals = {}
+let externals = {};
+
+let skillIndex = 0;
 
 externals.render = data => {
-    setUpskillsCard();
+    let {icon, skill, stack} = loadData(data);
+    setUpskillsCard(icon,skill,stack);
     setUpArrows();
 };
 
-const setUpskillsCard = data => {
+const loadData = data => {
+    const skillSet = Object.keys(data);
+    return data[skillSet[skillIndex]];
+}
+
+const loadSkillsStack = stack => {
+    stack.forEach(element => {
+        $('.skills-card-body').append('<p>'+ element +'</p>');
+        console.log(element);
+    });
+}
+
+const setUpskillsCard = (icon,skill,stack) => {
     $('.content').append(
         '<div id="skills">' +
             '<div class="skills-card">' +
                 '<div class="skills-card-header">' +
                     '<div class="skill-card-header-img-container">' +
-                        '<img src="../../public/java.svg"/>' +
+                        '<img src="'+ icon +'"/>' +
                     '</div>' +
-                    '<h2>Java</h2>' +
+                    '<h2>'+ skill +'</h2>' +
                     '</div>' +
                 '<div class="skills-card-description">' +
                     '<p>description lorem ipsum</p>' +
                 '</div>' +
                 '<div class="skills-card-body">' +
-                    '<p>Jakarta EE</p>' +
-                    '<p>JPA</p>' +
-                    '<p>Spring</p>' +
-                    '<p>Hibernate</p>' +
-                    '<p>Maven</p>' +
-                    '<p>Thymeleaf</p>' +
-                    '<p>Tomcat</p>' +
-                    '<p>Junit</p>' +
-                    '<p>Mockito</p>' +
-                    '<p>Log4J</p>' +
                 '</div>' +
             '</div>' +
         '</div>'
         );
+        loadSkillsStack(stack);
 }
 
 export default externals;

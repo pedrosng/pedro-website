@@ -16,5 +16,4 @@ export const setUpArrows = () => {
         '<div class="arrow" id="right"></div>' +
         "</div>"
     );
-  console.log("arrowssetup");
 };
