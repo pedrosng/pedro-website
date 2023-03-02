@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding-right: 20vw;
+    padding-right: 2%;
     padding-bottom: 2%;
     column-gap: 2%;
 }
@@ -15,6 +15,11 @@
     border-width: 2px;
     border-radius: 10%;
     width: 300px;
+}
+
+#background 
+{
+    opacity: 0.3;
 }
 
 .skills-card-header 

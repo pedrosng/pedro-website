@@ -1,7 +1,7 @@
 import "../../css/arrows-animation.css";
 
 export const setUpArrows = () => {
-  $(".skills-card")
+  $("#front")
     .before(
       '<div class="arrows">' +
         '<div class="arrow" id="left"></div>' +
