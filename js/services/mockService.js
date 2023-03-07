@@ -26,13 +26,15 @@ let projectsData = 'wow so many amazing projects';
 let skillsData = {
     java: {
         icon: '../../public/java.svg',
-        skill: 'Java',
-        stack: ['Jakarta EE','JPA','Spring','Hibernate','Maven','Thymeleaf','Tomcat','Junit','Mockito','Log4J']
+        skillTitle: 'Java',
+        technologyDescription: 'lorem ipsum',
+        technologicalStack: ['Jakarta EE','JPA','Spring','Hibernate','Maven','Thymeleaf','Tomcat','Junit','Mockito','Log4J']
     },
     javascript: {
         icon: '../../public/javascript.svg',
-        skill: 'JavaScript',
-        stack: ['React','Cypress','Three.js','GSAP','Node','Jquery','Hapi','Knex/Objection.js']
+        skillTitle: 'JavaScript',
+        technologyDescription: 'lorem ipsum',
+        technologicalStack: ['React','Cypress','Three.js','GSAP','Node','Jquery','Hapi','Knex/Objection.js']
     }
 };
 

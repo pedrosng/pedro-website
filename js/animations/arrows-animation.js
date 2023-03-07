@@ -1,7 +1,7 @@
 import "../../css/arrows-animation.css";
 
 export const setUpArrows = () => {
-  $("#front")
+  $(".skills-card")
     .before(
       '<div class="arrows">' +
         '<div class="arrow" id="left"></div>' +
@@ -16,4 +16,19 @@ export const setUpArrows = () => {
         '<div class="arrow" id="right"></div>' +
         "</div>"
     );
+  
 };
+
+/** 
+const arrowsControls = () => {
+
+  $('#left').click((skillsSetIndex) => {
+    console.log('skill set index is: ', skillsSetIndex);
+    console.log('left arrows click');
+  });
+  
+  $('#right').click(() => {
+    console.log('right arrows click');
+  });
+}
+*/
