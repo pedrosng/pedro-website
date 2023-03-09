@@ -4,30 +4,41 @@ import { skilsCardAnimation } from '../animations/skills-card-animation';
 
 let externals = {};
 let internals = {};
-let skillsSetIndex = 0;
 
 externals.render = data => {
-
+    
     internals.data = data;
+    internals.skillSetIndex = 0;
 
     $('.content').append(
         '<div id="skills">' +
         '</div>'
     );
     
-    //selects skillset from object to present on card
-    internals.skillsSet = Object.keys(internals.data)[skillsSetIndex];
-
-    setUpCard(internals.data[internals.skillsSet]);
-    setUpArrows();
+    renderCard();
     skilsCardAnimation();
-    setUpArrowsControls();
 
 };
 
-const setUpCard = (skillSet) => {
-    
-    let { icon, skillTitle, technologyDescription, technologicalStack } = skillSet;
+const renderCard = () => {
+   $('#skills').empty();
+
+   //selects skillset from object to present on card
+   internals.currentSkillSet = selctSkillSet();
+
+   setUpCard(internals.currentSkillSet);
+   setUpArrows();
+   setUpArrowsControls(); 
+}
+
+
+const selctSkillSet = () => {
+    return internals.data[Object.keys(internals.data)[internals.skillSetIndex]];
+}
+
+const setUpCard = (currentSkillSet) => {
+
+    let { icon, skillTitle, technologyDescription, technologicalStack } = currentSkillSet;
 
     $('#skills').append(
         '<div class="skills-card">' +
@@ -65,21 +76,29 @@ const loadSkillsList = technologicalStack => {
 }
 
 const setUpArrowsControls = () => {
-    $('#left').click(() => {
-        console.log('skill set index is: ', skillsSetIndex);
-        console.log('left arrows click');
+    $('#backward').click(() => {
+        //check if current skillset is the first skillset go to last one
+        if(internals.currentSkillSet.skillTitle == internals.data[Object.keys(internals.data)[0]].skillTitle){
+            internals.skillSetIndex = Object.keys(internals.data).length -1;
+            renderCard();
+            return;
+        }
+
+        internals.skillSetIndex--;
+        renderCard();
     });
     
-    $('#right').click(() => {
-        skillsSetIndex++;
-        console.log(skillsSetIndex);
-        console.log(Object.keys(internals.data)[skillsSetIndex]);
-        $('#skills').empty();
-        setUpCard(internals.data[Object.keys(internals.data)[skillsSetIndex]]);
-        setUpArrows();
-        setUpArrowsControls();
-        console.log('skill set index is: ', skillsSetIndex);
-        console.log('right arrows click');
+    $('#forward').click(() => {
+        //check if current skillset is the last skillset, if so, returns to begining
+        if(internals.currentSkillSet.skillTitle == internals.data[Object.keys(internals.data)[Object.keys(internals.data).length-1]].skillTitle){
+            internals.skillSetIndex = 0;
+            renderCard();
+            return;
+        }
+
+        internals.skillSetIndex++;
+        renderCard();
+
     });
   }
 

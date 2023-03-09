@@ -3,14 +3,14 @@ import "../../css/arrows-animation.css";
 export const setUpArrows = () => {
   $(".skills-card")
     .before(
-      '<div class="arrows">' +
+      '<div class="arrows" id="backward">' +
         '<div class="arrow" id="left"></div>' +
         '<div class="arrow" id="left"></div>' +
         '<div class="arrow" id="left"></div>' +
         "</div>"
     )
     .after(
-      '<div class="arrows">' +
+      '<div class="arrows" id="forward">' +
         '<div class="arrow" id="right"></div>' +
         '<div class="arrow" id="right"></div>' +
         '<div class="arrow" id="right"></div>' +
@@ -18,17 +18,3 @@ export const setUpArrows = () => {
     );
   
 };
-
-/** 
-const arrowsControls = () => {
-
-  $('#left').click((skillsSetIndex) => {
-    console.log('skill set index is: ', skillsSetIndex);
-    console.log('left arrows click');
-  });
-  
-  $('#right').click(() => {
-    console.log('right arrows click');
-  });
-}
-*/
