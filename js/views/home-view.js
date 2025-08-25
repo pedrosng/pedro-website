@@ -1,22 +1,22 @@
-import '../../css/home-view.css';
+import "../../css/home-view.css";
+import { typewriterAnimation } from "../animations/typewriter-animation";
 
-let externals = {}
+let externals = {};
 
-externals.render = data => {
-    loadContent(data);
+externals.render = (data) => {
+  loadContent(data);
+  typewriterAnimation(data);
 };
 
-const loadContent = data => {
-    $('.content').append(
-        '<div id="home">' + 
-            '<p class="header">' +
-                data.heather +  
-            '</p>' +
-            '<p class="body">' +
-                data.body + 
-            '</p>' + 
-        '</div>'
-    );
-}
+const loadContent = (data) => {
+  $(".content").append(
+    '<div id="home">' +
+      '<p class="header">' +
+      "</p>" +
+      '<p class="body">' +
+      "</p>" +
+      "</div>"
+  );
+};
 
 export default externals;
