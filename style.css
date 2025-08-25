@@ -1,26 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
 
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html,
-body
-{
-  font-family: 'Heebo', 'sans-serif';
+body {
+  font-family: "Heebo", "sans-serif";
   font-weight: 100;
-  font-size: 1em;
+  font-size: 1.1em;
   color: whitesmoke;
   background-color: black;
   overflow: hidden;
 }
 
-.frame
-{
+.frame {
   width: 96vw;
   height: 94vh;
   border-color: whitesmoke;
@@ -35,16 +32,14 @@ body
   align-items: flex-end;
 }
 
-.landing 
-{
+.landing {
   z-index: 2;
   font-size: 1.1rem;
   width: inherit;
   display: flex;
 }
 
-.content 
-{
+.content {
   display: flex;
   /**flex-direction: column;*/
   z-index: 2;
@@ -54,22 +49,20 @@ body
   */
   width: inherit;
   height: inherit;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  color: darkturquoise; 
+  color: darkturquoise;
   /**padding-left: 10em;
   padding-right: 10em;*/
   max-width: 96vw;
   max-height: 94vh;
 }
 
-.webgl
-{
+.webgl {
   position: absolute;
   top: 0;
   left: 0;
   /*remove border created on canvas when mouse controls shape shape*/
   outline: none;
 }
-

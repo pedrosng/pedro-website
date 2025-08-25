@@ -4,7 +4,7 @@ export const setUpLanding = () => {
   $(".landing").append(
     '<div class="logo">' +
       '<p id="name">Pedro G</p>' +
-      '<p id="occupation">Software Engineer</p>' +
+      '<p id="occupation">Developer</p>' +
       '<p id="occupation">Teacher</p>' +
       '<p id="occupation">AI Enthusiast</p>' +
       "</div>" +
