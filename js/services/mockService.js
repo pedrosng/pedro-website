@@ -2,7 +2,7 @@ let externals = {};
 
 let homeData = {
   header: "Hi there, I´m Pedro!",
-  body: "I'm a software engineer and programming instructor with a 6-year track record at Code for All — a hybrid software house and programming school. During this time, I taught fullstack development both in person and remotely, led instructional teams, and helped hundreds of students break into tech. I also designed and maintained course curricula, created hands-on learning materials, and developed internal educational platforms to scale learning delivery.My background bridges education, software development, and product thinking. I specialize in software development, building educational tools, AI-integrated applications, and scalable fullstack platforms.Currently looking for international opportunities where I can apply my technical skills and instructional experience to impactful, user-centered products.",
+  body: "I'm a software engineer and programming instructor with a 6-year track record at Code for All — a hybrid software house and programming school. During this time, I taught fullstack development both in person and remotely, led instructional teams, and helped hundreds of students break into tech. I also designed and maintained course curricula, created hands-on learning materials, and developed internal educational platforms to scale learning delivery.My background bridges education, software development, and product thinking. I specialize in software development, building educational tools, AI-integrated applications, and scalable fullstack platforms.",
 };
 
 let infoData = {
