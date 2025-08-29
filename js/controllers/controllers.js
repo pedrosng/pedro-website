@@ -8,9 +8,7 @@ import homeView from "../views/home-view";
 let externals = {};
 
 externals.contactController = () => {
-  let contactContent = mockService.getContactContent();
-
-  contactView.render(contactContent);
+  contactView.render();
 };
 
 externals.homeController = () => {

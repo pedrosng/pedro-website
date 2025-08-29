@@ -26,7 +26,7 @@ export const typewriterAnimation = (data) => {
 
   bodyText.split("").forEach((char, i) => {
     tl.to(header, {
-      duration: 0.05, // typing speed per char
+      duration: 0.04, // typing speed per char
       onUpdate: () => {
         body.textContent = bodyText.substring(0, i + 1);
       },
