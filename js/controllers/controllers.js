@@ -1,46 +1,40 @@
-import mockService from '../services/mockService'
+import mockService from "../services/mockService";
+import contactView from "../views/contact-view";
+import infoView from "../views/info-view";
+import projectsView from "../views/projects-view";
+import skillsView from "../views/skills-view";
+import homeView from "../views/home-view";
 
-import contactView from '../views/contact-view';
-import infoView from '../views/info-view';
-import projectsView from '../views/projects-view';
-import skillsView from '../views/skills-view';
-import homeView from '../views/home-view';
-
-let externals = {}
+let externals = {};
 
 externals.contactController = () => {
-    
-    let contactContent = mockService.getContactContent();
+  let contactContent = mockService.getContactContent();
 
-    contactView.render(contactContent);
-}
+  contactView.render(contactContent);
+};
 
 externals.homeController = () => {
-    
-    let homeContent = mockService.getHomeContent();
+  let homeContent = mockService.getHomeContent();
 
-    homeView.render(homeContent);    
-}
+  homeView.render(homeContent);
+};
 
 externals.infoController = () => {
+  let infoContent = mockService.getInfoContent();
 
-    let infoContent = mockService.getInfoContent();    
-
-    infoView.render(infoContent);  
-}
+  infoView.render(infoContent);
+};
 
 externals.projectsController = () => {
+  let projectsContent = mockService.getProjectsContent();
 
-    let projectsContent = mockService.getProjectsContent();
-
-    projectsView.render(projectsContent);   
-}
+  projectsView.render(projectsContent);
+};
 
 externals.skillController = () => {
-    
-    let skillsContent = mockService.getSkillsContent();    
+  let skillsContent = mockService.getSkillsContent();
 
-    skillsView.render(skillsContent);  
-}
+  skillsView.render(skillsContent);
+};
 
 export default externals;

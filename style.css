@@ -48,7 +48,7 @@ body {
   height: 70vh;
   */
   width: inherit;
-  /*height: inherit;*/
+  height: inherit;
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
