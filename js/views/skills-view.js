@@ -1,6 +1,6 @@
-import { setUpArrows } from "../animations/arrows-animation";
+import { setUpArrows } from "../animations/arrows-animation.js";
 import "../../css/skills-view.css";
-import { skilsCardAnimation } from "../animations/skills-card-animation";
+import { skilsCardAnimation } from "../animations/skills-card-animation.js";
 
 let externals = {};
 let internals = {};

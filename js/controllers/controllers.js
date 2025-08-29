@@ -1,9 +1,9 @@
-import mockService from "../services/mockService";
-import contactView from "../views/contact-view";
-import infoView from "../views/info-view";
-import projectsView from "../views/projects-view";
-import skillsView from "../views/skills-view";
-import homeView from "../views/home-view";
+import mockService from "../services/mockService.js";
+import contactView from "../views/contact-view.js";
+import infoView from "../views/info-view.js";
+import projectsView from "../views/projects-view.js";
+import skillsView from "../views/skills-view.js";
+import homeView from "../views/home-view.js";
 
 let externals = {};
 
